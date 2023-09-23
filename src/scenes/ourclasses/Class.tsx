@@ -10,8 +10,8 @@ type Props = {
 }
 
 const overlayStyles = `p-5 absolute z-30 flex h-[380px] w-[450px] flex-col items-center 
-                        justify-center whitespace-normanl bg-primary-500 text-center text-white
-                        opacity-0 transition duration-500 hover:opacity-90`
+                        justify-center whitespace-normal bg-primary-500 text-center text-white
+                        opacity-0 transition duration-500 hover:opacity-90 hover:cursor-pointer`
 
 const Class = ({ name, description, image, setSelectedPage }: Props) => {
   return (

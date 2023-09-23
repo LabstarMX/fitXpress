@@ -5,6 +5,7 @@ import Link from './link';
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import ActionButton from '@/shared/ActionButton';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
 
@@ -24,7 +25,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
     const navBarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow"
   return (
     <nav>
-        <div className={ `${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
+        <div className={ `${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 z-[11]`}>
             <div className={`${flexBetween} mx-auto w-5/6`}>
                 <div className={`${flexBetween} w-full gap-16`}>
                   {/* LEFT SIDE */}
@@ -36,7 +37,50 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                   
                   <div className={`${flexBetween} w-full `}>
                     <div className={`${flexBetween} gap-8 text-sm `}>
-                      <Link page="Home" selectedPage={selectedPage} 
+
+                    <AnchorLink
+                        className={`${selectedPage === "home" ? "text-primary-500" : ""}
+                        transition duration-500 hover:text-primary-300
+                        active:text-primary-500`}    
+                        href={`#${SelectedPage.Home}`}              
+                      >
+                        Home
+                    </AnchorLink>
+
+                      <AnchorLink
+                        className={`${selectedPage === "benefits" ? "text-primary-500" : ""}
+                                transition duration-500 hover:text-primary-300
+                                active:text-primary-500`}    
+                        href={`#${SelectedPage.Benefits}`}              
+                      >
+                        Benefits
+                      </AnchorLink>
+
+                      <AnchorLink
+                        className={`${selectedPage === "ourclasses" ? "text-primary-500" : ""}
+                                transition duration-500 hover:text-primary-300
+                                active:text-primary-500`}    
+                        href={`#${SelectedPage.OurClasses}`}              
+                      >
+                        Our Classes
+                      </AnchorLink>
+
+                      <AnchorLink
+                        className={`${selectedPage === "contactus" ? "text-primary-500" : ""}
+                                transition duration-500 hover:text-primary-300
+                                active:text-primary-500`}    
+                        href={`#${SelectedPage.ContactUs}`}              
+                      >
+                        Contact Us
+                      </AnchorLink>
+
+
+
+
+
+
+
+                      {/* <Link page="Home" selectedPage={selectedPage} 
                             setSelectedPage={setSelectedPage}
                              />
                       <Link page="Benefits" 
@@ -47,11 +91,18 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                             setSelectedPage={setSelectedPage} />
                       <Link page="Contact Us" 
                             selectedPage={selectedPage} 
-                            setSelectedPage={setSelectedPage} />                      
+                            setSelectedPage={setSelectedPage} />                       */}
                     </div>
 
                     <div className={`${flexBetween} gap-8`}>
-                      <p className="cursor-pointer" >Sign In</p>
+                      <AnchorLink
+                          className={`${selectedPage === "signin" ? "text-primary-500" : ""}
+                                  transition duration-500 hover:text-primary-300
+                                  active:text-primary-500`}    
+                          href={`#${SelectedPage.SignIn}`}              
+                        >
+                          Sign In
+                      </AnchorLink>
                       <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
                       
                       
@@ -85,18 +136,49 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
             </div>
               {/* MENU ITEMS */}
               <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-                <Link page="Home" 
-                      selectedPage={selectedPage} 
-                      setSelectedPage={setSelectedPage} />
-                <Link page="Benefits" 
-                      selectedPage={selectedPage} 
-                      setSelectedPage={setSelectedPage} />
-                <Link page="Our Classes" 
-                      selectedPage={selectedPage} 
-                      setSelectedPage={setSelectedPage} />
-                <Link page="Contact Us" 
-                      selectedPage={selectedPage} 
-                      setSelectedPage={setSelectedPage} />                      
+                <AnchorLink
+                    className={`${selectedPage === "home" ? "text-primary-500" : ""}
+                    transition duration-500 hover:text-primary-300
+                    active:text-primary-500`}    
+                    href={`#${SelectedPage.Home}`}              
+                  >
+                    Home
+                </AnchorLink>
+
+                  <AnchorLink
+                    className={`${selectedPage === "benefits" ? "text-primary-500" : ""}
+                            transition duration-500 hover:text-primary-300
+                            active:text-primary-500`}    
+                    href={`#${SelectedPage.Benefits}`}              
+                  >
+                    Benefits
+                  </AnchorLink>
+
+                  <AnchorLink
+                    className={`${selectedPage === "ourclasses" ? "text-primary-500" : ""}
+                            transition duration-500 hover:text-primary-300
+                            active:text-primary-500`}    
+                    href={`#${SelectedPage.OurClasses}`}              
+                  >
+                    Our Classes
+                  </AnchorLink>
+
+                  <AnchorLink
+                    className={`${selectedPage === "contactus" ? "text-primary-500" : ""}
+                            transition duration-500 hover:text-primary-300
+                            active:text-primary-500`}    
+                    href={`#${SelectedPage.ContactUs}`}              
+                  >
+                    Contact Us
+                  </AnchorLink>  
+                  <AnchorLink
+                      className={`${selectedPage === "signin" ? "text-primary-500" : ""}
+                              transition duration-500 hover:text-primary-300
+                              active:text-primary-500`}    
+                      href={`#${SelectedPage.SignIn}`}              
+                    >
+                      Sign In
+                  </AnchorLink>                    
               </div>              
             
           </div>

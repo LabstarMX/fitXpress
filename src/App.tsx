@@ -6,6 +6,7 @@ import Benefits from './scenes/benefits';
 import OurClasses from './scenes/ourclasses';
 import ContactUs from './scenes/contactus';
 import Footer from './scenes/footer';
+import SignIn from './scenes/signin';
 
 
 
@@ -27,12 +28,15 @@ function App() {
   }, [])
     
   
+    
+  
   return (
+    
     <div className='app bg-gray-20 bg'>
+
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} 
         setSelectedPage={setSelectedPage} 
       />
-
       <Home 
         setSelectedPage={setSelectedPage} 
       />
@@ -45,12 +49,46 @@ function App() {
       <ContactUs 
         setSelectedPage={setSelectedPage} 
       />
+      <SignIn  
+        setSelectedPage={setSelectedPage}
+      />
       <Footer 
         setSelectedPage={setSelectedPage} 
-      />  
+      />   
 
     </div>
   )
 }
 
 export default App;
+
+  //  {`${selectedPage === "signin" 
+  //     ? (
+  //       <SignIn selectedPage={selectedPage} setSelectedPage={setSelectedPage}
+  //       />
+  //     )
+  //     : (
+  //       <div className='app bg-gray-20 bg'>
+
+  //         <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} 
+  //           setSelectedPage={setSelectedPage} 
+  //         />
+  //         <Home 
+  //           setSelectedPage={setSelectedPage} 
+  //         />
+  //         <Benefits 
+  //           setSelectedPage={setSelectedPage} 
+  //         />
+  //         <OurClasses 
+  //           setSelectedPage={setSelectedPage} 
+  //         />
+  //         <ContactUs 
+  //           setSelectedPage={setSelectedPage} 
+  //         />
+  //         <Footer 
+  //           setSelectedPage={setSelectedPage} 
+  //         />   
+
+  //       </div>
+  //     )
+  //   }`}

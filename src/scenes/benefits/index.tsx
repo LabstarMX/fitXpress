@@ -40,7 +40,7 @@ type Props = {
 const Benefits = ({ setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20 ">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20 relative z-[1]">
         <motion.div className="i"
                     onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
@@ -78,9 +78,6 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         setSelectedPage={setSelectedPage}
                      />
                 ))}
-                <div>
-
-                </div>
             </motion.div>
             {/* GRAPHICS AND DESCRIPTION */}
             <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
@@ -139,7 +136,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         <div className="before:absolute before:-bottom-20 before:right-40 
                                         before:z-[-1] before:content-sparkles
                         ">
-                        <ActionButton  setSelectedPage={setSelectedPage} >Join Now</ActionButton>
+                            <ActionButton  setSelectedPage={setSelectedPage} >Join Now</ActionButton>
                         </div>
                         
 

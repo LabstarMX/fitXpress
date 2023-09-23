@@ -24,7 +24,7 @@ const  Link = ({page, selectedPage, setSelectedPage }: Props) => {
             onClick={() => setSelectedPage(`#${lowerCasePage}`)}
             href={`#${SelectedPage.ContactUs}`}
             // href={`#${SelectedPage.Home}`}
-            
+
             
             
             
