@@ -13,8 +13,8 @@ const Footer = ({ setSelectedPage }: Props) => {
     <footer className="bg-primary-100 py-16" >
         <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
             {/* LOGO */}
-            <div className="mt-16 basis-1/2 md:mt-0">
-                <img src={Logo} alt="logo" />
+            <div className="mt-16 basis-1/4 md:mt-0">
+                <img src={Logo} alt="logo" width="113px" height="24px" />
                 <p className="my-5" >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                  Consequatur veniam possimus consequuntur quas? Accusantium modi, dicta
                   aspernatur magnam ut beatae blanditiis quis aut reiciendis quos ipsum ex

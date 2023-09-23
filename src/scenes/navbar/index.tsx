@@ -28,7 +28,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
             <div className={`${flexBetween} mx-auto w-5/6`}>
                 <div className={`${flexBetween} w-full gap-16`}>
                   {/* LEFT SIDE */}
-                  <img  alt="logo" src={Logo} />
+                  <img  alt="logo" src={Logo} width="113px" height="24px" />
 
                   {/* RIGHT SIDE */}
                   {/* DESKTOP VIEW */}
@@ -37,7 +37,8 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                   <div className={`${flexBetween} w-full `}>
                     <div className={`${flexBetween} gap-8 text-sm `}>
                       <Link page="Home" selectedPage={selectedPage} 
-                            setSelectedPage={setSelectedPage} />
+                            setSelectedPage={setSelectedPage}
+                             />
                       <Link page="Benefits" 
                             selectedPage={selectedPage} 
                             setSelectedPage={setSelectedPage} />
@@ -61,7 +62,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                   ) : (
                   /* MOBILE VIEW */
                     <div>
-                      <button className="rounded-full bg-secondary-500 p-2 "
+                      <button className="rounded-full bg-secondary-500 p-2  "
                         onClick={() => setIsMenuToggled(!isMenuToggled)}
                       >
                         <Bars3Icon className="h-6 w-6 text-white" />

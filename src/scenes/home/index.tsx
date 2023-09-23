@@ -41,10 +41,10 @@ const Home = ({ setSelectedPage }: Props) => {
                         <div className="before:absolute before:-top-20 before:-left-20 
                                         before:z-[-1] md:before:content-evolvetext"
                         >
-                            <img src={HomePageText} alt="home-page-text"  />
+                            <img src={HomePageText} alt="home-page-text" width="489px" height="163px"  />
                         </div>
                     </div>
-                    <p className="mt-8 text-sm">Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
+                    <p className="mt-8 text-sm ">Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
                         Studios to get the Body Shapes That you Dream of.. 
                         Get Your Dream Body Now.
                     </p>

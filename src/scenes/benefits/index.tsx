@@ -5,7 +5,7 @@ import ActionButton from "@/shared/ActionButton"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid"
 import HText from "@/shared/HText"
-import Benefit from "./benefit"
+import Benefit from "./Benefit"
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
 
 const benefits: Array<BenefitType> = [
@@ -137,7 +137,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                     {/* BUTTON */}
                     <div className="relative mt-16">
                         <div className="before:absolute before:-bottom-20 before:right-40 
-                                    before:z-[-1] before:content-sparkles
+                                        before:z-[-1] before:content-sparkles
                         ">
                         <ActionButton  setSelectedPage={setSelectedPage} >Join Now</ActionButton>
                         </div>
